@@ -13,7 +13,7 @@ ENDIF()
 find_package(catkin REQUIRED COMPONENTS eigen_catkin)
 
 catkin_package(
- INCLUDE_DIRS sophus
+ INCLUDE_DIRS include
  LIBRARIES sophus
  CATKIN_DEPENDS eigen_catkin
  DEPENDS 
@@ -31,10 +31,11 @@ SET (CLASSES  so2
 SET (SOURCES)
 
 FOREACH(class ${CLASSES})
-  LIST(APPEND SOURCES ${SOURCE_DIR}/${class}.cpp ${SOURCE_DIR}/${class}.h)
+  LIST(APPEND SOURCES ${SOURCE_DIR}/${class}.cpp include/${SOURCE_DIR}/${class}.h)
 ENDFOREACH(class)
 
 INCLUDE_DIRECTORIES(
+  include
   ${catkin_INCLUDE_DIRS}
 )
 ADD_LIBRARY(sophus SHARED ${SOURCES})
