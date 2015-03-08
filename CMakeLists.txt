@@ -6,8 +6,8 @@ IF (CMAKE_COMPILER_IS_GNUCXX )
    SET(CMAKE_CXX_FLAGS_DEBUG  "-O0 -g")
    SET(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG ")
 
-  ADD_DEFINITIONS("-Wall -Werror -Wno-unused-variable
-                   -Wno-unused-but-set-variable -Wno-unknown-pragmas ")
+#  ADD_DEFINITIONS("-Wall -Werror -Wno-unused-variable
+#                   -Wno-unused-but-set-variable -Wno-unknown-pragmas ")
 ENDIF()
 
 find_package(catkin REQUIRED COMPONENTS eigen_catkin)
